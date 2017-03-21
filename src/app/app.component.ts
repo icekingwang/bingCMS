@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  active = 'wenzhang';
+  routerLinkActive = 'wenzhang';
+
+  checkTab(t){
+    return t===this.active;
+  }
+
+  clickTabFun(t){
+    this.active=t;
+  }
 }
