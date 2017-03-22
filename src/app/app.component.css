@@ -36,3 +36,8 @@
   background-color: #999999;
 }
 
+.main-container {
+  padding-top: 80px;
+  min-height: 800px;
+}
+

@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserLoginComponent implements OnInit {
 
+  title="登陆";
+
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

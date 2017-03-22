@@ -8,18 +8,20 @@ import { AppComponent } from './app.component';
 import {appRoutes} from './app.routes';
 import {UserRegisterComponent} from "./user/user-register/user-register.component";
 import {UserLoginComponent} from "./user/user-login/user-login.component";
+import {UserModule} from "./user/user.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserLoginComponent,
-    UserRegisterComponent
+    // UserLoginComponent,
+    // UserRegisterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
