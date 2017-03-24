@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {User} from '../model/user-model';
+
 
 @Component({
   selector: 'app-user-login',
@@ -8,11 +10,20 @@ import { Component, OnInit } from '@angular/core';
 export class UserLoginComponent implements OnInit {
 
   title="登陆";
+  public user:User = new User();
+  public error:Error;
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit() {
 
+  }
+
+  doLogin(){
+    console.log("doLogin");
+    return false;
   }
 
 }
