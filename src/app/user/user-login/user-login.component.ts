@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from '../model/user-model';
+import {UserLoginService} from './user-login.service';
 
 
 @Component({
@@ -13,8 +14,8 @@ export class UserLoginComponent implements OnInit {
   public user:User = new User();
   public error:Error;
 
-  constructor() {
-
+  constructor(public userLoginService:UserLoginService) {
+    ()=>console.log(this.user);
   }
 
   ngOnInit() {
@@ -22,7 +23,10 @@ export class UserLoginComponent implements OnInit {
   }
 
   doLogin(){
+    console.log(this);
+    console.log(this.user);
     console.log("doLogin");
+    this.userLoginService.login(this.user);
     return false;
   }
 
