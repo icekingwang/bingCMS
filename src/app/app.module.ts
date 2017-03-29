@@ -6,23 +6,22 @@ import {RouterModule} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import {appRoutes} from './app.routes';
-import {UserRegisterComponent} from "./user/user-register/user-register.component";
-import {UserLoginComponent} from "./user/user-login/user-login.component";
-import {UserModule} from "./user/user.module";
 import {UserLoginService} from "./user/user-login/user-login.service";
+import {UserLoginComponent} from "./user/user-login/user-login.component";
+import {UserRegisterComponent} from "./user/user-register/user-register.component";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    // UserLoginComponent,
-    // UserRegisterComponent
-  ],
   imports: [
     BrowserModule,
-    FormsModule,
+    SharedModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
-    UserModule
+  ],
+  declarations: [
+    AppComponent,
+    UserLoginComponent,
+    UserRegisterComponent
   ],
   providers: [UserLoginService],
   bootstrap: [AppComponent]
