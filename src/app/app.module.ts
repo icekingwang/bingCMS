@@ -5,11 +5,11 @@ import { HttpModule } from '@angular/http';
 import {RouterModule} from '@angular/router';
 
 import { AppComponent } from './app.component';
-import {appRoutes} from './app.routes';
 import {UserLoginService} from "./user/user-login/user-login.service";
 import {UserLoginComponent} from "./user/user-login/user-login.component";
-import {UserRegisterComponent} from "./user/user-register/user-register.component";
+// import {UserRegisterComponent} from "./user/user-register/user-register.component";
 import {SharedModule} from "./shared/shared.module";
+import {appRoutes} from "./app.routes";
 
 @NgModule({
   imports: [
@@ -20,8 +20,8 @@ import {SharedModule} from "./shared/shared.module";
   ],
   declarations: [
     AppComponent,
-    UserLoginComponent,
-    UserRegisterComponent
+    // UserLoginComponent,
+    // UserRegisterComponent
   ],
   providers: [UserLoginService],
   bootstrap: [AppComponent]

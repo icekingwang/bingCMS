@@ -4,10 +4,13 @@ import {UserRegisterComponent} from './user-register/user-register.component';
 import {FormsModule} from "@angular/forms";
 import {SharedModule} from "../shared/shared.module";
 import { UserInfoComponent } from './user-info/user-info.component';
+import {RouterModule} from "@angular/router";
+import {userRoutes} from "./user.routes";
 
 @NgModule({
   imports: [
-    SharedModule
+    SharedModule,
+    RouterModule.forChild(userRoutes)
   ],
   declarations: [
     UserLoginComponent,

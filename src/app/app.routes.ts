@@ -1,14 +1,18 @@
 // 1.import RouterModule
-import {RouterModule} from "@angular/router";
-import {UserLoginComponent} from "./user/user-login/user-login.component"
-import {UserRegisterComponent} from "./user/user-register/user-register.component"
+import {RouterModule, Router, Routes} from "@angular/router";
+import {UserLoginComponent} from "./user/user-login/user-login.component";
+import {UserRegisterComponent} from "./user/user-register/user-register.component";
+// import {UserRegisterComponent} from "./user/user-register/user-register.component"
 
-
-export const appRoutes = [
+export const appRoutes:Routes = [
   {
     path:'',
     redirectTo:'posts',
     pathMatch:'full'
+  },
+  {
+    path:'home',
+    loadChildren:'./home/home.module#HomeModule'
   },
   {
     path:"login",
@@ -16,6 +20,6 @@ export const appRoutes = [
   },
   {
     path:"register",
-    component:UserRegisterComponent
+    loadChildren:'./home/home.module#HomeModule'
   }
 ];
