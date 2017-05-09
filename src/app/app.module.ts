@@ -10,6 +10,7 @@ import {UserLoginComponent} from "./user/user-login/user-login.component";
 // import {UserRegisterComponent} from "./user/user-register/user-register.component";
 import {SharedModule} from "./shared/shared.module";
 import {appRoutes} from "./app.routes";
+import {UserRegisterComponent} from "./user/user-register/user-register.component";
 
 @NgModule({
   imports: [
@@ -20,8 +21,8 @@ import {appRoutes} from "./app.routes";
   ],
   declarations: [
     AppComponent,
-    // UserLoginComponent,
-    // UserRegisterComponent
+    UserLoginComponent,
+    UserRegisterComponent
   ],
   providers: [UserLoginService],
   bootstrap: [AppComponent]
