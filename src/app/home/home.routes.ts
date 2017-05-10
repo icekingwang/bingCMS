@@ -8,7 +8,7 @@ export const homeRoutes=[
     children:[
       {
         path:"",
-        loadChildren:"../user/user.module#UserModule",
+        loadChildren:"../post/post.module#PostModule",
       }
     ]
   }

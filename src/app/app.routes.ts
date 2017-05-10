@@ -15,6 +15,10 @@ export const appRoutes:Routes = [
     loadChildren:'./home/home.module#HomeModule'
   },
   {
+    path:'posts',
+    loadChildren:'./home/home.module#HomeModule'
+  },
+  {
     path:"login",
     component:UserLoginComponent
   },
