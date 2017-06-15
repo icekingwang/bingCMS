@@ -25,7 +25,7 @@ export class AppComponent {
         let routerState: RouterState = this.router.routerState;
         let routerStateSnapshot: RouterStateSnapshot = routerState.snapshot;
         if(routerStateSnapshot.url.indexOf("/login")!=-1){
-          this.router.navigateByUrl("/home");
+          this.router.navigateByUrl("/");
         }
       },
       error=>{}
