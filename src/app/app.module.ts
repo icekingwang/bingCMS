@@ -8,9 +8,16 @@ import { AppComponent } from './app.component';
 import {UserLoginService} from "./user/user-login/user-login.service";
 import {UserLoginComponent} from "./user/user-login/user-login.component";
 // import {UserRegisterComponent} from "./user/user-register/user-register.component";
+
 import {SharedModule} from "./shared/shared.module";
 import {appRoutes} from "./app.routes";
 import {UserRegisterComponent} from "./user/user-register/user-register.component";
+import { FullLayoutComponent } from './full-layout/full-layout.component';
+import {NAV_DROPDOWN_DIRECTIVES} from "./shared/nav-dropdown.directive";
+import {BreadcrumbsComponent} from "./shared/breadcrumb.component";
+import {SIDEBAR_TOGGLE_DIRECTIVES} from "./shared/sidebar.directive";
+import {AsideToggleDirective} from "./shared/aside.directive";
+import { TabsModule } from 'ngx-bootstrap/tabs';
 
 @NgModule({
   imports: [
@@ -18,11 +25,17 @@ import {UserRegisterComponent} from "./user/user-register/user-register.componen
     SharedModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
+    TabsModule.forRoot()
   ],
   declarations: [
     AppComponent,
     UserLoginComponent,
-    UserRegisterComponent
+    UserRegisterComponent,
+    FullLayoutComponent,
+    NAV_DROPDOWN_DIRECTIVES,
+    BreadcrumbsComponent,
+    SIDEBAR_TOGGLE_DIRECTIVES,
+    AsideToggleDirective,
   ],
   providers: [UserLoginService],
   bootstrap: [AppComponent]

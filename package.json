@@ -11,7 +11,6 @@
     "e2e": "protractor",
     "build:aot": "ngc -p tsconfig-aot.json --locale=en-US&& node ./node_modules/rollup/bin/rollup -c rollup-config.js",
     "serve:aot": "lite-server -c=bs-config.aot.js"
-
   },
   "private": true,
   "dependencies": {
@@ -26,11 +25,10 @@
     "@angular/platform-browser-dynamic": "^4.1.1",
     "@angular/platform-server": "^4.1.1",
     "@angular/router": "^4.1.1",
-    "bootstrap": "^3.3.7",
     "chart.js": "^2.5.0",
     "core-js": "^2.4.1",
     "install": "^0.10.0",
-    "ng2-bootstrap": "^1.4.2",
+    "ngx-bootstrap": "^1.7.1",
     "npm": "^4.5.0",
     "rxjs": "^5.0.1",
     "ts-helpers": "^1.1.1",

@@ -4,13 +4,10 @@ import {User} from "./user/model/user-model";
 import {RouterState, RouterStateSnapshot, Router} from "@angular/router";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'body',
+  template: '<router-outlet></router-outlet>'
 })
 export class AppComponent {
-  title = 'app works!';
-  count = 0;
   	public currentUser : User;
 
 
@@ -21,13 +18,9 @@ export class AppComponent {
   ngOnInit(){
     this.currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
-
-    console.log(this.userLoginService.currentUser);
     this.userLoginService.currentUser.subscribe(
       next=>{
         this.currentUser = next;
-        this.count++;
-        console.log("运行第"+ this.count + "次+++++++++++++++++++++++/n");
 
         let routerState: RouterState = this.router.routerState;
         let routerStateSnapshot: RouterStateSnapshot = routerState.snapshot;
