@@ -36,7 +36,7 @@ export const appRoutes:Routes = [
       },
       {
         path: 'charts',
-        loadChildren: './home/home.module#HomeModule'
+        loadChildren: './chart/chart.module#ChartModule'
       }
     ]
   },
