@@ -3,6 +3,7 @@ import {RouterModule, Router, Routes} from "@angular/router";
 import {UserLoginComponent} from "./user/user-login/user-login.component";
 import {UserRegisterComponent} from "./user/user-register/user-register.component";
 import {FullLayoutComponent} from "./full-layout/full-layout.component";
+import {TinymceComponent} from "./tinymce/tinymce.component";
 // import {UserRegisterComponent} from "./user/user-register/user-register.component"
 
 export const appRoutes:Routes = [
@@ -31,8 +32,8 @@ export const appRoutes:Routes = [
         loadChildren: './home/home.module#HomeModule'
       },
       {
-        path: 'widgets',
-        loadChildren: './home/home.module#HomeModule'
+        path: 'tinymce',
+        component: TinymceComponent
       },
       {
         path: 'charts',

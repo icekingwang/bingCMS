@@ -18,6 +18,7 @@ import {BreadcrumbsComponent} from "./shared/breadcrumb.component";
 import {SIDEBAR_TOGGLE_DIRECTIVES} from "./shared/sidebar.directive";
 import {AsideToggleDirective} from "./shared/aside.directive";
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { TinymceComponent } from './tinymce/tinymce.component';
 
 @NgModule({
   imports: [
@@ -36,6 +37,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     BreadcrumbsComponent,
     SIDEBAR_TOGGLE_DIRECTIVES,
     AsideToggleDirective,
+    TinymceComponent,
   ],
   providers: [UserLoginService],
   bootstrap: [AppComponent]
