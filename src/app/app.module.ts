@@ -15,8 +15,8 @@ import {UserRegisterComponent} from "./user/user-register/user-register.componen
 import { FullLayoutComponent } from './full-layout/full-layout.component';
 import {NAV_DROPDOWN_DIRECTIVES} from "./shared/nav-dropdown.directive";
 import {BreadcrumbsComponent} from "./shared/breadcrumb.component";
-import {SIDEBAR_TOGGLE_DIRECTIVES} from "./shared/sidebar.directive";
-import {AsideToggleDirective} from "./shared/aside.directive";
+import {SIDEBAR_TOGGLE_DIRECTIVES, SidebarDirective} from "./shared/sidebar.directive";
+import {AsideToggleDirective, AsideDirective} from "./shared/aside.directive";
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { TinymceComponent } from './tinymce/tinymce.component';
 
@@ -38,6 +38,8 @@ import { TinymceComponent } from './tinymce/tinymce.component';
     SIDEBAR_TOGGLE_DIRECTIVES,
     AsideToggleDirective,
     TinymceComponent,
+    SidebarDirective,
+    AsideDirective
   ],
   providers: [UserLoginService],
   bootstrap: [AppComponent]
